@@ -3,8 +3,6 @@
 This repository contains [Selenium](http://seleniumhq.org/) tests for the [Premier League App](https://www.premierleague.com/tables).
 
 
-
-
 # Requirements
 
 ```
@@ -14,7 +12,7 @@ This repository contains [Selenium](http://seleniumhq.org/) tests for the [Premi
 4. Maven dependencies 
     * Extent Reports   : version 2.41.2
     * selenium-java    : version 3.12
-    * testng           : version 6.14.3
+    * testng           : version 6.14.2
     * javacsv          : version 2.0
        (from sourceforge)
 5. Chromedriver binary : version 2.40
@@ -58,4 +56,13 @@ This repository contains [Selenium](http://seleniumhq.org/) tests for the [Premi
 8. Open the ReadLeagueTable class file available in the project and Right click, Select Run As -> TestNG option
       
       <img src="ReadPremierLeagueTable/images/TestNGrun.png" width="800" height="400" />
+
+# Reporting
+
+Right click on the project and Refresh once the execution is completed.
+
+Then Open Report.html file which is available in Execution Reports folder in the project
+<img src="ReadPremierLeagueTable/images/Reports1.png" width="400" height="280" />
+<img src="ReadPremierLeagueTable/images/Reports2.png" width="400" height="280" />
+
 
