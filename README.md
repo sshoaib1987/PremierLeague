@@ -44,7 +44,7 @@ This repository contains [Selenium](http://seleniumhq.org/) tests to extract res
 
    In order to launch Chrome browser we have to do the following steps:
     
-    * Get the location of downloaded Chromedriver.exe file and set the path for **chromedriverPath** in test.properties file available         in the project root folder
+    * Get the location of downloaded Chromedriver.exe file and set the path for **chromedriverPath** in test.properties file available         in the test reources folder of the project
     * Set a system property “webdriver.chrome.driver” to the path of your ChromeDriver.exe file
     * Instantiate a ChromeDriver class.
 
