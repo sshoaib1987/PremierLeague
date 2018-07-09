@@ -1,6 +1,6 @@
 # Overview
 
-This repository contains [Selenium](http://seleniumhq.org/) tests for the [Premier League App](https://www.premierleague.com/tables).
+This repository contains [Selenium](http://seleniumhq.org/) tests to extract results for Season 2018/19 from the [Premier League App](https://www.premierleague.com/tables).
 
 
 # Requirements
