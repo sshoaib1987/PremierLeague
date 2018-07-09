@@ -17,7 +17,7 @@ This repository contains [Selenium](http://seleniumhq.org/) tests to extract res
        (from sourceforge)
 5. Chrome Browser      : version 67.0
 6. Chromedriver binary : version 2.40
-       
+7. Windows OS       
  ```
        
 # Running Selenium tests
