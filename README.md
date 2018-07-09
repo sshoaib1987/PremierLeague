@@ -21,6 +21,7 @@ This repository contains [Selenium](http://seleniumhq.org/) tests to extract res
  ```
 # Folder structure
 
+
 * **src/main/java**        : This Folder contains the main class which is required to run the Test.
 * **src/test/resources**   : This Folder contains the supporting files necessary to run the class present in main folder.
 * **Execution Reports**    : This Folder contains the execution reports in HTML format, after the project is executed.
