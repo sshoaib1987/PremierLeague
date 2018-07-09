@@ -56,18 +56,18 @@ public class ReadLeagueTable {
 		//Record Start time of execution
 		Date date = new Date();
 		startTime = date.getTime();
-		logger.log(LogStatus.INFO, "Start time of execution:   " + startTime );
+		logger.log(LogStatus.PASS, "Recorded Start time of execution as:   " + startTime );
 
 		//Launch Chrome Browser
 		System.setProperty("webdriver.chrome.driver",properties.getProperty("chromedriverPath"));
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		logger.log(LogStatus.INFO, "Browser started");
+		logger.log(LogStatus.PASS, "Browser started");
 
 		//Open Premier League Website
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		driver.get("https://www.premierleague.com/tables");
-		logger.log(LogStatus.INFO, "Premier League Website launched");
+		logger.log(LogStatus.PASS, "Premier League Website launched");
 
 	}
 
@@ -88,7 +88,7 @@ public class ReadLeagueTable {
 		if (!file.exists()) {
 			file.createNewFile();
 		}
-		logger.log(LogStatus.INFO, "Created CSV File");
+		logger.log(LogStatus.PASS, "Created CSV File");
 
 
 		fw = new FileWriter(file, true);
@@ -113,7 +113,7 @@ public class ReadLeagueTable {
 
 		}
 
-		logger.log(LogStatus.INFO, "Written Table Header values to CSV File");
+		logger.log(LogStatus.PASS, "Written Table Header values to CSV File");
 		//Marking end of line in csv file after writing All Header values
 		writer.endRecord();
 
@@ -152,7 +152,7 @@ public class ReadLeagueTable {
 			
 		}
 		System.out.println("Data is successfully extracted from Premier league website");
-		logger.log(LogStatus.INFO, "Written Table content values to CSV File");
+		logger.log(LogStatus.PASS, "Written Table content values to CSV File");
 		
 
 	}
@@ -169,8 +169,8 @@ public class ReadLeagueTable {
 		Date date = new Date();
 		endTime = date.getTime();
 		execTime = endTime - startTime;
-		logger.log(LogStatus.INFO, "End time of execution:   " + execTime );
-		logger.log(LogStatus.INFO,"Total execution time in hh:mm:ss format:   " + String.format("%02d:%02d:%02d", 
+		logger.log(LogStatus.PASS, "Recorded End time of execution as:   " + execTime );
+		logger.log(LogStatus.PASS,"Total execution time in hh:mm:ss format:   " + String.format("%02d:%02d:%02d", 
 				TimeUnit.MILLISECONDS.toHours(execTime),
 				TimeUnit.MILLISECONDS.toMinutes(execTime) -  
 				TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(execTime)), // The change is in this line
@@ -179,7 +179,7 @@ public class ReadLeagueTable {
 
 		//Rename the file with Total Exeuction time
 		file.renameTo(new File("Output CSV File\\" + execTime + ".csv"));
-		logger.log(LogStatus.INFO, "Renamed file with Total Execution time");
+		logger.log(LogStatus.PASS, "Renamed file with Total Execution time");
 
 		report.endTest(logger);
 		report.flush();
