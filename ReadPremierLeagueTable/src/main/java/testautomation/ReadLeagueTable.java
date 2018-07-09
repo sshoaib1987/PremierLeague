@@ -18,8 +18,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -30,25 +28,28 @@ public class ReadLeagueTable {
 	public static ExtentReports report;
 	public static ExtentTest logger;
 	Properties properties;
-	long startTime = 12345678910L;
-	long endTime = 12345678910L;
-	long execTime = 12345678910L;
+	long startTime, endTime,execTime;
 	File file = null;
 	WebDriver driver = null;
-
+	FileWriter fw = null;
+	CsvWriter writer = null;
+	
 	
 	@BeforeSuite
 	public void beforeSuite() throws IOException
 	{
-		File prop = new File("test.properties");
-		FileInputStream fileInput = new FileInputStream(prop);
+		//Load Properties File
+		FileInputStream fileInput = new FileInputStream(new File("src\\test\\resources\\test.properties"));
 		properties = new Properties();
 		properties.load(fileInput);		
 		
-		report=new ExtentReports(properties.getProperty("ExtentReportPath"), true);
-		report.loadConfig(new File(properties.getProperty("ExtentConfigPath")));
-		logger=report.startTest("Verify Premier League table");
+		//Configure Extent reports
+		report=new ExtentReports("Execution Reports\\"+"Reports.html", true);
+		report.loadConfig(new File("src\\test\\resources\\extent-config.xml"));
+		logger=report.startTest("Capture Premier League table values for season 2018/19");
 	}
+	
+	
 	@BeforeTest
 	public void setup() throws Exception {
 		
@@ -57,46 +58,20 @@ public class ReadLeagueTable {
 		startTime = date.getTime();
 		logger.log(LogStatus.INFO, "Start time of execution:   " + startTime );
 
-		System.out.println("Start Time in milliseconds: " + startTime);
+		//Launch Chrome Browser
 		System.setProperty("webdriver.chrome.driver",properties.getProperty("chromedriverPath"));
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		logger.log(LogStatus.INFO, "Browser started");
 
-		
+		//Open Premier League Website
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		driver.get("https://www.premierleague.com/tables");
 		logger.log(LogStatus.INFO, "Premier League Website launched");
 
 	}
 
-	@AfterTest
-	public void tearDown() throws Exception {
-		driver.quit();
-
-		//Record End time of execution
-		Date date = new Date();
-		endTime = date.getTime();
-		execTime = endTime - startTime;
-		logger.log(LogStatus.INFO, "End time of execution:   " + execTime );
-		System.out.println("Total execution time in milliseconds is:  " + execTime);
-		
-		logger.log(LogStatus.INFO,"Total time in hh:mm:ss format:   " + String.format("%02d:%02d:%02d", 
-				TimeUnit.MILLISECONDS.toHours(execTime),
-				TimeUnit.MILLISECONDS.toMinutes(execTime) -  
-				TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(execTime)), // The change is in this line
-				TimeUnit.MILLISECONDS.toSeconds(execTime) - 
-				TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(execTime))));   
-
-		//Rename the file with Total Exeuction time
-		file.renameTo(new File("Output CSV File\\" + execTime + ".csv"));
-		logger.log(LogStatus.INFO, "Renamed file with Total Execution time");
-
-		report.endTest(logger);
-		report.flush();
-		
-	}
-
+	
 	@Test
 	public void print_data() throws IOException {
 
@@ -104,11 +79,9 @@ public class ReadLeagueTable {
 		
 		// Get number of Rows In League table.
 		int Row_count = driver.findElements(By.xpath("(//table//tbody)[1]/tr")).size();
-		System.out.println("Number Of Rows = " + Row_count);
 
 		// Get number of Columns In League table.
 		Col_count = driver.findElements(By.xpath("(//table//tbody)[1]/tr[1]/td")).size();
-		System.out.println("Number Of Columns = " + Col_count);
 
 		//Create a csv file
 		file = new File("Output CSV File\\"+"PremierLeagueData.csv");
@@ -118,8 +91,8 @@ public class ReadLeagueTable {
 		logger.log(LogStatus.INFO, "Created CSV File");
 
 
-		FileWriter fw = new FileWriter(file, true);
-		CsvWriter writer = new CsvWriter(fw, ',');
+		fw = new FileWriter(file, true);
+		writer = new CsvWriter(fw, ',');
 
 		//Find all the header elements of League Table
 		List<WebElement> irow2 = driver.findElements(By.xpath("(//table//thead)[1]/tr/th"));
@@ -178,9 +151,39 @@ public class ReadLeagueTable {
 
 			
 		}
+		System.out.println("Data is successfully extracted from Premier league website");
 		logger.log(LogStatus.INFO, "Written Table content values to CSV File");
-		writer.close();
+		
 
+	}
+	
+	
+	@AfterTest
+	public void tearDown() throws Exception {
+		driver.quit();
+		fw.close();
+		writer.close();
+		
+		
+		//Record End time of execution
+		Date date = new Date();
+		endTime = date.getTime();
+		execTime = endTime - startTime;
+		logger.log(LogStatus.INFO, "End time of execution:   " + execTime );
+		logger.log(LogStatus.INFO,"Total execution time in hh:mm:ss format:   " + String.format("%02d:%02d:%02d", 
+				TimeUnit.MILLISECONDS.toHours(execTime),
+				TimeUnit.MILLISECONDS.toMinutes(execTime) -  
+				TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(execTime)), // The change is in this line
+				TimeUnit.MILLISECONDS.toSeconds(execTime) - 
+				TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(execTime))));   
+
+		//Rename the file with Total Exeuction time
+		file.renameTo(new File("Output CSV File\\" + execTime + ".csv"));
+		logger.log(LogStatus.INFO, "Renamed file with Total Execution time");
+
+		report.endTest(logger);
+		report.flush();
+		
 	}
 
 }

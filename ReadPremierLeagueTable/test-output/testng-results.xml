@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="47940" started-at="2018-07-08T07:18:42Z" finished-at="2018-07-08T07:19:30Z">
+  <suite name="Default suite" duration-ms="85167" started-at="2018-07-09T03:06:27Z" finished-at="2018-07-09T03:07:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="47940" started-at="2018-07-08T07:18:42Z" finished-at="2018-07-08T07:19:30Z">
+    <test name="Default test" duration-ms="85167" started-at="2018-07-09T03:06:27Z" finished-at="2018-07-09T03:07:53Z">
       <class name="testautomation.ReadLeagueTable">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testautomation.ReadLeagueTable@1bce4f0a]" name="beforeSuite" is-config="true" duration-ms="111" started-at="2018-07-08T07:18:42Z" finished-at="2018-07-08T07:18:42Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testautomation.ReadLeagueTable@57baeedf]" name="beforeSuite" is-config="true" duration-ms="622" started-at="2018-07-09T03:06:27Z" finished-at="2018-07-09T03:06:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:testautomation.ReadLeagueTable@1bce4f0a]" name="setup" is-config="true" duration-ms="34828" started-at="2018-07-08T07:18:42Z" finished-at="2018-07-08T07:19:17Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testautomation.ReadLeagueTable@57baeedf]" name="setup" is-config="true" duration-ms="41046" started-at="2018-07-09T03:06:27Z" finished-at="2018-07-09T03:07:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="print_data()[pri:0, instance:testautomation.ReadLeagueTable@1bce4f0a]" name="print_data" duration-ms="12174" started-at="2018-07-08T07:19:17Z" finished-at="2018-07-08T07:19:29Z">
+        <test-method status="PASS" signature="print_data()[pri:0, instance:testautomation.ReadLeagueTable@57baeedf]" name="print_data" duration-ms="38456" started-at="2018-07-09T03:07:09Z" finished-at="2018-07-09T03:07:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- print_data -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testautomation.ReadLeagueTable@1bce4f0a]" name="tearDown" is-config="true" duration-ms="922" started-at="2018-07-08T07:19:29Z" finished-at="2018-07-08T07:19:30Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testautomation.ReadLeagueTable@57baeedf]" name="tearDown" is-config="true" duration-ms="5557" started-at="2018-07-09T03:07:47Z" finished-at="2018-07-09T03:07:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
