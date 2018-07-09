@@ -15,7 +15,8 @@ This repository contains [Selenium](http://seleniumhq.org/) tests to extract res
     * testng           : version 6.14.2
     * javacsv          : version 2.0
        (from sourceforge)
-5. Chromedriver binary : version 2.40
+5. Chrome Browser      : version 67.0
+6. Chromedriver binary : version 2.40
        
  ```
        
