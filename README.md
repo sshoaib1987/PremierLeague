@@ -65,4 +65,13 @@ Then Open Report.html file which is available in Execution Reports folder in the
 <img src="ReadPremierLeagueTable/images/Reports1.png" width="400" height="280" />
 <img src="ReadPremierLeagueTable/images/Reports2.png" width="400" height="280" />
 
+# Output CSV File
+Right click on the project and Refresh once the execution is completed.
+
+Then Open xxxx.csv file which is available in Output CSV File folder in the project.
+<img src="ReadPremierLeagueTable/images/csv.png" width="400" height="280" />
+
+
+
+
 
