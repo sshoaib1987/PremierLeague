@@ -30,7 +30,7 @@ This repository contains [Selenium](http://seleniumhq.org/) tests to extract res
 
 # Running Selenium tests
 
-1. First of all you need to install **JDK** version 1.8 for Windows 64 bit in your system and also setup Java Environment variable.To get a detailed guide on how to install Java, Please <a href="https://drive.google.com/open?id=1S_jt7mUKnJakfdZrKIRSzsxTGc-TYMdE">click here</a>
+1. Firstly, you need to install **JDK** version 1.8 for Windows 64 bit in your system and also setup Java Environment variable.To get a detailed guide on how to install Java, Please <a href="https://drive.google.com/open?id=1S_jt7mUKnJakfdZrKIRSzsxTGc-TYMdE">click here</a>
 
 2. Download **Maven** and Set up Maven Environment Variable. Follow the step by step instructions given in <a href="https://drive.google.com/open?id=1S9pB4Zk7veq_YCDi7w1TMgHv6390ZH1o">this</a> link. 
 
