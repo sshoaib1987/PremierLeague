@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="47940" started-at="2018-07-08T07:18:42Z" finished-at="2018-07-08T07:19:30Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="47940" started-at="2018-07-08T07:18:42Z" finished-at="2018-07-08T07:19:30Z">
+      <class name="testautomation.ReadLeagueTable">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testautomation.ReadLeagueTable@1bce4f0a]" name="beforeSuite" is-config="true" duration-ms="111" started-at="2018-07-08T07:18:42Z" finished-at="2018-07-08T07:18:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:testautomation.ReadLeagueTable@1bce4f0a]" name="setup" is-config="true" duration-ms="34828" started-at="2018-07-08T07:18:42Z" finished-at="2018-07-08T07:19:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="print_data()[pri:0, instance:testautomation.ReadLeagueTable@1bce4f0a]" name="print_data" duration-ms="12174" started-at="2018-07-08T07:19:17Z" finished-at="2018-07-08T07:19:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- print_data -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testautomation.ReadLeagueTable@1bce4f0a]" name="tearDown" is-config="true" duration-ms="922" started-at="2018-07-08T07:19:29Z" finished-at="2018-07-08T07:19:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testautomation.ReadLeagueTable -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
