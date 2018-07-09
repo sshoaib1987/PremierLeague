@@ -6,8 +6,8 @@ This repository contains [Selenium](http://seleniumhq.org/) tests to extract res
 # Requirements
 
 ```
-1. Java version - version 8
-2. Apache Maven - version 3.5.4
+1. Java version        : version 8
+2. Apache Maven        : version 3.5.4
 3. Eclipse IDE
 4. Maven dependencies 
     * Extent Reports   : version 2.41.2
