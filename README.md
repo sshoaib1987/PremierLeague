@@ -19,20 +19,27 @@ This repository contains [Selenium](http://seleniumhq.org/) tests to extract res
 6. Chromedriver binary : version 2.40
 7. Windows OS       
  ```
-       
+# Folder structure
+
+* **src/main/java**        : This Folder contains the main class which is required to run the Test.
+* **src/test/resources**   : This Folder contains the supporting files necessary to run the class present in main folder.
+* **Execution Reports**    : This Folder contains the execution reports in HTML format, after the project is executed.
+* **Output CSV File**      : This Folder contains the CSV file, which has values extracted from Premier League Website for season                                    2018/19 
+* **pom.xml**              : Provide the Maven dependencies here, which are required for the project to run.
+
 # Running Selenium tests
 
-1. First of all you need to install JDK version 1.8 for Windows 64 bit in your system and also setup Java Environment variable.To get a detailed guide on how to install Java, Please <a href="https://drive.google.com/open?id=1S_jt7mUKnJakfdZrKIRSzsxTGc-TYMdE">click here</a>
+1. First of all you need to install **JDK** version 1.8 for Windows 64 bit in your system and also setup Java Environment variable.To get a detailed guide on how to install Java, Please <a href="https://drive.google.com/open?id=1S_jt7mUKnJakfdZrKIRSzsxTGc-TYMdE">click here</a>
 
-2. Download Maven and Set up Maven Environment Variable. Follow the step by step instructions given in <a href="https://drive.google.com/open?id=1S9pB4Zk7veq_YCDi7w1TMgHv6390ZH1o">this</a> link. 
+2. Download **Maven** and Set up Maven Environment Variable. Follow the step by step instructions given in <a href="https://drive.google.com/open?id=1S9pB4Zk7veq_YCDi7w1TMgHv6390ZH1o">this</a> link. 
 
-3. Download and Start Eclipse IDE by following the steps in <a href="https://drive.google.com/open?id=1IaOGHymbUCUBIyTmEwgq8p5D1eGZVGrx">this</a> link. 
+3. Download and Start **Eclipse IDE** by following the steps in <a href="https://drive.google.com/open?id=1IaOGHymbUCUBIyTmEwgq8p5D1eGZVGrx">this</a> link. 
 
-4. Clone this repository to your local machine or Download the project.
+4. **Clone** this repository to your local machine or Download the project.
 
-5. Import the downloaded Maven Project using Eclipse IDE. Steps are detailed in <a href="https://drive.google.com/open?id=1d4JTccc7P7X_zzxdYvby_wzhd4OTWA0M">this</a> link.
+5. **Import the downloaded Maven Project** using Eclipse IDE. Steps are detailed in <a href="https://drive.google.com/open?id=1d4JTccc7P7X_zzxdYvby_wzhd4OTWA0M">this</a> link.
 
-6. Download the Chromedrive binary from <a href="http://chromedriver.chromium.org/downloads">Chromium project</a>. See <a href="https://drive.google.com/open?id=1WYRRFy3tuasB5A9u6nQzBpT3egYNXLNw">here</a> for steps
+6. **Download the Chromedrive binary** from <a href="http://chromedriver.chromium.org/downloads">Chromium project</a>. See <a href="https://drive.google.com/open?id=1WYRRFy3tuasB5A9u6nQzBpT3egYNXLNw">here</a> for steps
 
    In order to launch Chrome browser we have to do the following steps:
     
@@ -54,7 +61,7 @@ This repository contains [Selenium](http://seleniumhq.org/) tests to extract res
 7. <a href="https://drive.google.com/open?id=1jhwcuI0yNJ34YwbEAPCo-n_yuRTNS7vH
 ">Install TestNG plugin for Eclipse</a> from Eclipse Marketplace.
 
-8. Open the ReadLeagueTable class file available in the project and Right click, Select Run As -> TestNG option
+8. Open the ReadLeagueTable class file available in the project and Right click, Select **Run As -> TestNG** option
       
       <img src="ReadPremierLeagueTable/images/TestNGrun.png" width="800" height="400" />
 
